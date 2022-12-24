@@ -1,0 +1,55 @@
+<html>
+    <meta charset="UTF-8">
+    <h1>05-05 Práctica número secreto V1.0</h1> <! 05-05 número secreto simple>
+    <h3>----------------------------------------------------------------</h3>
+    <br>
+    <br>
+    <br>
+    <br>
+    Captura un número entre el 0 y el 10 y haz click en el botón "Confirmar número secreto".
+    <br>
+    <br>
+    <input/>
+    <button>Confirmar número secreto</button>  
+
+    <script>
+
+        var secreto = Math.round(Math.random() * 10);
+        var input = document.querySelector("input");
+        input.focus();
+
+        document.write("<br> Secreto: " + secreto);
+            
+
+        function verificar() {
+
+           if (parseInt(input.value) == secreto) {
+
+                alert("Número correcto!");
+                document.write("<br> <h1>¡Felicidades! </h1>");
+            }
+            else {
+
+                alert("Número incorrecto!");
+            }
+            input.value = "";
+            input.focus(); 
+        }
+            
+        var button = document.querySelector("button");
+        button.onclick = verificar;
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <h4>Práctica por Raúl Trueba Mejía - G4 2022 CDMX</h4>
+        <a href="https://www.linkedin.com/in/deepfx/"><img src="linkedin.png" alt="Contacto Raúl Trueba"></a>
+        <a><img src="one.png" alt="Contacto Raúl Trueba" width="36" height="36"></a>
+        <a><img src="logoalura.svg" alt="Contacto Raúl Trueba" width="32" height="32"></a>       
+    </div>
+</html>
